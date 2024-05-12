@@ -9,12 +9,13 @@ export async function register(profile) {
 
   const response = await fetch(registerURL, {
     headers: {
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
     },
     method,
-    body
+    body,
   });
 
   const result = await response.json();
-  console.log(result);
+  alert("Profile was registered")
+  return result
 }
